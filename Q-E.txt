@@ -1,0 +1,21 @@
+# Question - E : Plot for State-wise Public Health Expenditure "increasig percentage"during 2016-17 to 2017-18
+
+df0 = df['States-UTs']
+print("------------------------------------------------")
+print("List of sates/UTs which data available:")
+print("------------------------------------------------")
+print(df0)
+print("------------------------------------------------")
+
+plt.title('plot-2 : for State-wise Public Health Expenditure "increasig percentage" during 2016-17 to 2017-18')
+plt.xlabel("States/UTs --- >")
+plt.ylabel("Increasing percentage --- >")
+
+plt.plot(df3,
+            marker=6,
+            markersize=10,
+            linestyle='dashed',
+            label="Percentage_increase")
+
+plt.legend()
+plt.show()      
