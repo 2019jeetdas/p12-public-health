@@ -1,0 +1,22 @@
+
+# Question – B : print column names :
+
+print('------------------------\n Column names as follows :')
+print('------------------------\n')
+count = 0
+for col in df.columns: 
+        print(count,"-->",col)
+        count = count+1
+print("\n-----------------------------\n")
+
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Sl.No
+1 --> States-UTs
+2 --> 2016-17-(BE)
+3 --> 2017-18-(BE)
+4 --> percentage_increase
+
+-----------------------------
