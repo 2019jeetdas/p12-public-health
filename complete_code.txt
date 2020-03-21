@@ -1,0 +1,98 @@
+# -*- coding: utf-8 -*-
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import random
+import pandas
+
+
+df = pd.read_csv("C:/Users/Jeet Das/Desktop/dataset12.csv",encoding="utf-8")
+
+print("\n------- output data :-----------\n")
+print("State-wise [ India ] Public Health Expenditure during 2016-17 to 2017-18"); 
+print("\t(From: Ministry of Health and Family Welfare) analysis:");
+print("\n-----------------------------------\n")
+
+
+# Question – A : get row and column numbers 
+
+print('---------------------------------------------')
+print("Dimension of the data frame = ",df.shape)
+print('---------------------------------------------')
+
+# Question – B : print column names :
+
+print('------------------------\n Column names as follows :')
+print('------------------------\n')
+count = 0
+for col in df.columns: 
+        print(count,"-->",col)
+        count = count+1
+print("\n-----------------------------\n")
+
+
+# Question - C : List of sates/UTs which data available
+
+df0 = df['States-UTs']
+print("------------------------------------------------")
+print("List of sates/UTs which data available:")
+print("------------------------------------------------")
+print(df0)
+print("------------------------------------------------")
+
+
+# Question - D : Plot for State-wise Public Health Expenditure during 2016-17 to 2017-18
+
+df0 = df['States-UTs']
+print("------------------------------------------------")
+print("List of sates/UTs which data available:")
+print("------------------------------------------------")
+print(df0)
+print("------------------------------------------------")
+
+df1 = df['2016-17-(BE)']
+df2 = df['2017-18-(BE)']
+
+df3 = df['percentage_increase']
+
+plt.title('plot-1 : for State-wise Public Health Expenditure during 2016-17 to 2017-18')
+plt.xlabel("States/UTs --- >")
+plt.ylabel("Rs. in crore --- >")
+    
+plt.plot(df1,
+            marker=4,
+            markersize=10,
+            linestyle='dashed',
+            label="1 --> 2016-17-(BE)")
+
+plt.plot(df2,
+            marker=5,
+            markersize=10,
+            linestyle='dashed',
+            label="2 --> 2017-18-(BE)")
+
+
+plt.legend()
+plt.show()
+
+# Question - E : Plot for State-wise Public Health Expenditure "increasig percentage"during 2016-17 to 2017-18
+
+df0 = df['States-UTs']
+print("------------------------------------------------")
+print("List of sates/UTs which data available:")
+print("------------------------------------------------")
+print(df0)
+print("------------------------------------------------")
+
+plt.title('plot-2 : for State-wise Public Health Expenditure "increasig percentage" during 2016-17 to 2017-18')
+plt.xlabel("States/UTs --- >")
+plt.ylabel("Increasing percentage --- >")
+
+plt.plot(df3,
+            marker=6,
+            markersize=10,
+            linestyle='dashed',
+            label="Percentage_increase")
+
+plt.legend()
+plt.show()      
